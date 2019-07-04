@@ -104,11 +104,63 @@ The `update` and `delete` route can be added but will not be discussed in this l
 
 At the end of the iteration, you should now have a form and the map in your `index.hbs`.
 
-### Iteration 5 - 
+### Iteration 5 - Passing data from mongodb to the client with Response.json()
 
 Now that the new places is saved to the database, it is time to display them on the map.
 Any idea on how to do that?
-In order to display the information of the database on the map which is on the client side javascript, we need to pass the data from our server side to the client side.
+
+In order to display the information of the database on the map which is on the client side javascript, we need to pass the data from the server side to the client side.
+
+We can send JSON to the client by using `Response.json()`, a useful method.
+
+It accepts an object or array, and converts it to JSON before sending it:
+
+```js
+res.json({ name: 'Ben' })
+```
+
+The complete GET route will look something like this:
+
+```js
+router.get('/api/places', async (req, res, next) => {
+  let placeFound = await Place.find({})
+  res.json(placeFound)
+})
+```
+
+Head over to `localhost:3000/api/places` and you will see your data in the form of JSON object.
+
+### Iteration6 - Displaying the coordinate of the places on our map.
+
+Now comes the most exciting part of the introduction. From the last iteration we now have access to the places stored in the database. It's time to display them on the map.
+
+We start with doing an axios.get request on the client side to obtain the JSON object data.
+
+Next, let's take another quick look at the [official documentation on marker.](https://docs.mapbox.com/mapbox-gl-js/api/#marker)
+
+```js
+let marker = new mapboxgl.Marker()
+  .setLngLat([30.5, 50.5])
+  .addTo(map);
+```
+
+This is all we need to display a marker on the map. At the end of the iteration, the client side javascript will look like this:
+
+```js
+ axios.get('http://localhost:3000/api/places').then((response) => {
+    let places = response.data
+
+    let marker = new mapboxgl.Marker()
+      .setLngLat(place.location.coordinate)
+      .setPopup(popup)
+      .addTo(map);
+
+    })
+  })
+  ```
+
+
+
 
 
 
