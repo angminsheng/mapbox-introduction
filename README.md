@@ -19,6 +19,7 @@ Let's start by displaying a map on our website. In order to do that, include the
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
+
 Include the following code in the <body> of the hbs file where you want to display the map, for example `index.hbs`.
 
 ```
