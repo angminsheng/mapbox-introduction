@@ -10,6 +10,16 @@ The Seven Wonders of the Ancient World is the first known list of the most remar
 
 Our goal today is very simple, let's display all the seven wonders of the world on a map so we can visualize where they are.
 
+## Instructions
+
+This exercise will help you to:
+- Practice MApbox API integration with an app
+- Add location properties in your models as GeoJSON
+- Display content from the database in a map
+
+
+![wonder pic](https://images.unsplash.com/photo-1551171129-8ce1ebb911b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
+
 ## Iteration 1 - Displaying your map
 
 Let's start by displaying a map on our website. In order to do that, include the JavaScript and CSS files in the <head> of your `layout.hbs`.
@@ -45,12 +55,6 @@ In `models` folder, create a new model `place.js`. For now, let's keep our model
     - timestamps 
 ```
 
-## Instructions
 
-This exercise will help you to:
-- Practice MApbox API integration with an app
-- Add location properties in your models as GeoJSON
-- Display content from the database in a map
 
-![cofee-book pic](https://images.unsplash.com/photo-1551171129-8ce1ebb911b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
 
