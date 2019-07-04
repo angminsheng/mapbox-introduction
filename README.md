@@ -34,6 +34,7 @@ Include the following code in the <body> of the hbs file where you want to displ
 
 ```html
 <div id='map' style='width: 400px; height: 300px;'></div>
+
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nbWluc2hlbmciLCJhIjoiY2pydDhjMjlwMXhpaDN5cHMxcjNya2ZmbyJ9.Tc5kmo0vZ1VKJbLK83OloA';
 var map = new mapboxgl.Map({
@@ -90,7 +91,11 @@ const placeSchema = new Schema({
 })
 
 const Place = mongoose.model('Place', placeSchema)
+
+module.exports = Place
 ```
+
+### Iteration 5 - 
 
 
 
