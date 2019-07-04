@@ -74,10 +74,6 @@ const Schema = mongoose.Schema;
 const placeSchema = new Schema({
   name: String,
   imageUrl: String,
-  place: {
-    type: String,
-    enum: ['Bookstore', 'Coffee shop']
-  },
   location: {
     type: {
       String,
@@ -88,14 +84,14 @@ const placeSchema = new Schema({
       type: [Number],
       required: true
     }
-  },
-  {
+  }
+}, {
     timestamps: {
       createdAt: 'created_at',
       updatedAt: 'updated_at'
     }
   }
-})
+)
 
 const Place = mongoose.model('Place', placeSchema)
 
