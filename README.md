@@ -66,7 +66,7 @@ In this iteration, we will create full CRUD on `place.js` model - to be able to 
 Since this might be the first time we are working with GeoJSON Objects in mongoose, let do this together.
 After referring to the offical documentation, this is how our `Place` model should look like, where `location` is a point.
 
-```
+```js
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
