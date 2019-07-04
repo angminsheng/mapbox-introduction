@@ -40,7 +40,7 @@ In `models` folder, create a new model `place.js`. For now, let's keep our model
 
 ```bash
     - name,
-    - type: coffee shop, bookstore
+    - country,
     - timestamps 
 ```
 
