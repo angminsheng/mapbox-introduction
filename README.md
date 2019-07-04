@@ -3,6 +3,11 @@ This is a short introduction of mapbox.
 
 For more information on mapbox, head over to the [official documentation of Mapbox](https://docs.mapbox.com/mapbox-gl-js/api/).
 
+## Introduction
+The Seven Wonders of the Ancient World is the first known list of the most remarkable man-made creations of classical antiquity, and was based on guide-books popular among Hellenic sight-seers and only includes works located around the Mediterranean rim. The number seven was chosen because the Greeks believed it to be the representation of perfection and plenty. Many similar lists have been made, including lists for the Medieval World and the Modern World.
+
+Our goal today is very simple, let's display all the seven wonders of the world on a map so we can visualize where they are.
+
 ## Displaying your map
 Let's start by displaying a map on our website. In order to do that, include the JavaScript and CSS files in the <head> of your `layout.hbs`.
   
