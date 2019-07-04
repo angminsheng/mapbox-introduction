@@ -73,6 +73,7 @@ const Schema = mongoose.Schema;
 
 const placeSchema = new Schema({
   name: String,
+  imageUrl: String,
   place: {
     type: String,
     enum: ['Bookstore', 'Coffee shop']
@@ -86,6 +87,12 @@ const placeSchema = new Schema({
     coordinates: {
       type: [Number],
       required: true
+    }
+  },
+  {
+    timestamps: {
+      createdAt: 'created_at',
+      updatedAt: 'updated_at'
     }
   }
 })
