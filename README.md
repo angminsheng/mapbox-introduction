@@ -55,6 +55,10 @@ In `models` folder, create a new model `place.js`. For now, let's keep our model
     - timestamps 
 ```
 
+### Iteration 3 - setting up CRUD operation for our model
+
+In this iteration, we will create full CRUD on `place.js` model - to be able to create, update, delete and display all the places you save in the database. You will have to create all the required routes and the corresponding views.842
+
 
 
 
