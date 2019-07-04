@@ -38,5 +38,5 @@ This exercise will help you to:
 - Add location properties in your models as GeoJSON
 - Display content from the database in a map
 
-![cofee-book pic](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_141038aa0f5ce10c722722400bfdc6d5.jpg)
+![cofee-book pic](https://images.unsplash.com/photo-1551171129-8ce1ebb911b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
 
