@@ -24,7 +24,7 @@ This exercise will help you to:
 
 Let's start by displaying a map on our website. In order to do that, include the JavaScript and CSS files in the <head> of your `layout.hbs`.
   
-```
+```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
 ```
@@ -32,7 +32,7 @@ Let's start by displaying a map on our website. In order to do that, include the
 
 Include the following code in the <body> of the hbs file where you want to display the map, for example `index.hbs`.
 
-```
+```html
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nbWluc2hlbmciLCJhIjoiY2pydDhjMjlwMXhpaDN5cHMxcjNya2ZmbyJ9.Tc5kmo0vZ1VKJbLK83OloA';
