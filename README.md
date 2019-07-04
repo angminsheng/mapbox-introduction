@@ -1,4 +1,4 @@
-# mapbox-introduction
+# Express | Mapbox - Seven wonders of the world
 This is a short introduction of mapbox.
 
 For more information on mapbox, head over to the [official documentation of Mapbox](https://docs.mapbox.com/mapbox-gl-js/api/).
