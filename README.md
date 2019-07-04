@@ -56,11 +56,7 @@ In `models` folder, create a new model `place.js`. For now, let's keep our model
     - timestamps 
 ```
 
-### Iteration 3 - Creating CRUD operation for our model
-
-In this iteration, we will create full CRUD on `place.js` model - to be able to create, update, delete and display all the places you save in the database. You will have to create all the required routes and the corresponding views.
-
-### Iteration 4 - Updating our `Place` model
+### Iteration 3 - Updating our `Place` model
 
 [GeoJSON](https://mongoosejs.com/docs/geojson.html) is a format for storing geographic points and polygons. [MongoDB has excellent support for geospatial queries on GeoJSON objects](http://thecodebarbarian.com/80-20-guide-to-mongodb-geospatial-queries). Let's take a look at how you can use Mongoose to store and query GeoJSON objects.
 
@@ -98,8 +94,21 @@ const Place = mongoose.model('Place', placeSchema)
 module.exports = Place
 ```
 
+### Iteration 3 - Creating CRUD operation for our model
+
+In this iteration, we will create full CRUD on `place.js` model - to be able to create, update, delete and display all the places you save in the database. You will have to create all the required routes and the corresponding views.
+
+Let's start with the `create` operation. In your `index.hbs`, create a form with a `POST` method to add new places into our database.
+
+The `update` and `delete` route can be added but will not be discussed in this lab. 
+
+At the end of the iteration, you should now have a form and the map in your `index.hbs`.
+
 ### Iteration 5 - 
 
+Now that the new places is saved to the database, it is time to display them on the map.
+Any idea on how to do that?
+In order to display the information of the database on the map which is on the client side javascript, we need to pass the data from our server side to the client side.
 
 
 
