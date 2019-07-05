@@ -72,7 +72,7 @@ const placeSchema = new Schema({
   imageUrl: String,
   location: {
     type: {
-      String,
+      type: String,
       enum: ['Point'],
       default: 'Point'
     },
@@ -158,6 +158,7 @@ This is all we need to display a marker on the map. At the end of the iteration,
     })
   })
   ```
+
 
 
 
