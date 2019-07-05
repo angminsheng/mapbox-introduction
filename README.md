@@ -34,7 +34,7 @@ Let's start by displaying a map on our website. In order to do that, include the
 Include the following code in the <body> of the hbs file where you want to display the map, for example `index.hbs`.
 
 ```html
-<div id='map' style='width: 400px; height: 300px;'></div>
+<div id='map' style='width: 85vw; height: 60vh; margin:50px auto;'></div>
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW5nbWluc2hlbmciLCJhIjoiY2pydDhjMjlwMXhpaDN5cHMxcjNya2ZmbyJ9.Tc5kmo0vZ1VKJbLK83OloA';
@@ -132,7 +132,7 @@ router.get('/api/places', (req, res, next) => {
 
 Head over to `localhost:3000/api/places` and you will see your data in the form of JSON object.
 
-### Iteration6 - Displaying the coordinate of the places on our map.
+### Iteration 6 - Displaying the coordinate of the places on our map.
 
 Now comes the most exciting part of the introduction. From the last iteration we now have access to the places stored in the database. It's time to display them on the map.
 
@@ -143,7 +143,7 @@ Next, let's take another quick look at the [official documentation on marker.](h
 ```js
 let marker = new mapboxgl.Marker()
   .setLngLat([30.5, 50.5])
-  .addTo(map);
+  .addTo(map)
 ```
 
 This is all we need to display a marker on the map. At the end of the iteration, the client side javascript will look like this:
@@ -152,14 +152,40 @@ This is all we need to display a marker on the map. At the end of the iteration,
  axios.get('http://localhost:3000/api/places').then((response) => {
     let places = response.data
 
-    let marker = new mapboxgl.Marker()
-      .setLngLat(place.location.coordinate)
-      .setPopup(popup)
-      .addTo(map);
-
+    places.forEach(place => {
+      let marker = new mapboxgl.Marker()
+        .setLngLat(place.location.coordinate)
+        .addTo(map)
     })
   })
   ```
+  
+  ### Bonus iteration - Attach a popup to a marker instance in mapbox
+  
+Mapbox has many build in component. Other than the marker component, the [popup component](https://docs.mapbox.com/mapbox-gl-js/example/set-popup/) is another commonly used component. In this bonus iteration, let's display a popup on click of our markers on the map.
+
+```js
+axios.get('http://localhost:3000/api/places').then((response) => {
+    let places = response.data
+    
+    places.forEach(place => {
+      let popup = new mapboxgl.Popup({ offset: 0, className: 'my-class' })
+        .setHTML(`<div class="popup"><p>${place.name}</p><img src="${place.imageUrl}" alt=""></div>`)
+        .setMaxWidth("none")
+
+      let marker = new mapboxgl.Marker()
+        .setLngLat(place.location.coordinate)
+        .setPopup(popup)
+        .addTo(map)
+    })
+  })
+  
+  ```
+
+  
+  
+  
+  
 That's it! Now you have successfully created your first mapbox project! Mapbox is very powerful and offer much more than this. Head over to the official documentation to learn more about it.
 
 Happy coding! 💗💗💗💗💗💗💗💗💗
