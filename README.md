@@ -102,8 +102,7 @@ In this iteration, we will create full CRUD on `place.js` model - to be able to 
 Let's start with the `create` operation. In your `index.hbs`, create a form with a `POST` method to add new places into our database.
 
 ```js
-<form action="/add-wonder" method="POST">
-
+<form action="/wonders" method="POST">
   <label for="name">name:</label>
   <input type="text" name="name">
   <label for="imageUrl">image-url:</label>
