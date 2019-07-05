@@ -124,7 +124,7 @@ router.post('/wonders', (req, res, next) => {
     Place.create({
       name, imageUrl, location: {
         type: "Point",
-        coordinate: [latitude, longitude]
+        coordinates: [latitude, longitude]
       }
     })
     .then(data => {res.redirect('/')})
@@ -187,7 +187,7 @@ This is all we need to display a marker on the map. At the end of the iteration,
 
     places.forEach(place => {
       let marker = new mapboxgl.Marker()
-        .setLngLat(place.location.coordinate)
+        .setLngLat(place.location.coordinates)
         .addTo(map)
     })
   })
@@ -207,7 +207,7 @@ axios.get('http://localhost:3000/api/places').then((response) => {
         .setMaxWidth("none")
 
       let marker = new mapboxgl.Marker()
-        .setLngLat(place.location.coordinate)
+        .setLngLat(place.location.coordinates)
         .setPopup(popup)
         .addTo(map)
     })
