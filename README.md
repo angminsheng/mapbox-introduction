@@ -17,6 +17,7 @@ This exercise will help you to:
 - Add location properties in your models as GeoJSON
 - Display content from the database in a map
 
+Create a new directory with `irongenerate` to start the code along.
 
 ![wonder pic](https://images.unsplash.com/photo-1551171129-8ce1ebb911b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
 
@@ -122,9 +123,10 @@ res.json({ name: 'Ben' })
 The complete GET route will look something like this:
 
 ```js
-router.get('/api/places', async (req, res, next) => {
-  let placeFound = await Place.find({})
-  res.json(placeFound)
+router.get('/api/places', (req, res, next) => {
+  Place.find({}).then(places=>{
+  res.json(places)
+  })
 })
 ```
 
