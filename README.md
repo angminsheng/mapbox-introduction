@@ -187,11 +187,13 @@ This is all we need to display a marker on the map. At the end of the iteration,
 
     places.forEach(place => {
       let marker = new mapboxgl.Marker()
-        .setLngLat(place.location.coordinates)
+        .setLngLat(place.location.coordinates.reverse())
         .addTo(map)
     })
   })
   ```
+  
+  Note: We are using Array.reverse() because Mapbox has a `.setLngLat()` method which is opposite from the normal coordinate convention.
   
   ### Bonus iteration - Attach a popup to a marker instance in mapbox
   
@@ -207,7 +209,7 @@ axios.get('http://localhost:3000/api/places').then((response) => {
         .setMaxWidth("none")
 
       let marker = new mapboxgl.Marker()
-        .setLngLat(place.location.coordinates)
+        .setLngLat(place.location.coordinates.reverse())
         .setPopup(popup)
         .addTo(map)
     })
