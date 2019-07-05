@@ -193,7 +193,7 @@ This is all we need to display a marker on the map. At the end of the iteration,
   })
   ```
   
-  Note: We are using Array.reverse() because Mapbox has a `.setLngLat()` method which is opposite from the normal coordinate convention.
+  Note: We are using `Array.reverse()` because Mapbox has a `.setLngLat()` method which is opposite from the normal coordinate convention.
   
   ### Bonus iteration - Attach a popup to a marker instance in mapbox
   
