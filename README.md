@@ -17,7 +17,7 @@ This exercise will help you to:
 - Add location properties in your models as GeoJSON
 - Display content from the database in a map
 
-Create a new directory with `irongenerate` to start the code along.
+Create a new project with `irongenerate` to start the lab.
 
 ![wonder pic](https://images.unsplash.com/photo-1551171129-8ce1ebb911b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
 
@@ -160,7 +160,9 @@ This is all we need to display a marker on the map. At the end of the iteration,
     })
   })
   ```
+That's it! Now you have successfully created your first mapbox project! Mapbox is very powerful and offer much more than this. Head over to the official documentation to learn more about it.
 
+Happy coding! 💗💗💗💗💗💗💗💗💗
 
 
 
