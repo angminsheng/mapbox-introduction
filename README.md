@@ -23,7 +23,7 @@ Create a new project with `irongenerate` to start the lab.
 
 ### Iteration 1 - Displaying your map
 
-Let's start by displaying a map on our website. In order to do that, include the JavaScript and CSS files in the <head> of your `layout.hbs`.
+Let's start by displaying a map on our website. In order to do that, include the JavaScript and CSS files in the `<head>` of your `layout.hbs`.
   
 ```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
