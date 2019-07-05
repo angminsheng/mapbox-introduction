@@ -115,6 +115,23 @@ Let's start with the `create` operation. In your `index.hbs`, create a form with
 </form>
 ```
 
+Don't forget to create a post route in the `index.js`.
+
+```js
+router.post('/wonders', (req, res, next) => {
+    const { name, imageUrl, latitude, longitude } = req.body
+
+    Place.create({
+      name, imageUrl, location: {
+        type: "Point",
+        coordinate: [latitude, longitude]
+      }
+    })
+    .then(data => {res.redirect('/')})
+    .catch(err => {console.log(err)})
+})
+```
+
 After you have the input form, fill the database with the information of the wonders that can be found [here](https://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World#Wonders).
 
 The `update` and `delete` route can be added but will not be discussed in this lab. 
