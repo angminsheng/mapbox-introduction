@@ -107,7 +107,7 @@ Let's start with the `create` operation. In your `index.hbs`, create a form with
   <input type="text" name="name">
   <label for="imageUrl">image-url:</label>
   <input type="text" name="imageUrl">
-  <label for="longitude">latitude:</label>
+  <label for="latitude">latitude:</label>
   <input type="number" step="0.0001" name="latitude">
   <label for="longitude">longitude:</label>
   <input type="number" step="0.0001" name="longitude">
