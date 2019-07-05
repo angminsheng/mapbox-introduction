@@ -101,6 +101,8 @@ In this iteration, we will create full CRUD on `place.js` model - to be able to 
 
 Let's start with the `create` operation. In your `index.hbs`, create a form with a `POST` method to add new places into our database.
 
+After you have the input form, fill the database with the information of the wonders that can be found [here](https://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World#Wonders).
+
 The `update` and `delete` route can be added but will not be discussed in this lab. 
 
 At the end of the iteration, you should now have a form and the map in your `index.hbs`.
