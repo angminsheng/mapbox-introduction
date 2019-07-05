@@ -95,7 +95,7 @@ const Place = mongoose.model('Place', placeSchema)
 module.exports = Place
 ```
 
-### Iteration 3 - Creating CRUD operation for our model
+### Iteration 4 - Creating CRUD operation for our model
 
 In this iteration, we will create full CRUD on `place.js` model - to be able to create, update, delete and display all the places you save in the database. You will have to create all the required routes and the corresponding views.
 
